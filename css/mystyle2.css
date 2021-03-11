@@ -1,0 +1,8 @@
+div {
+    width: 100%px;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-image: url("../html/rock.jpg");
+    background-attachment: fixed;
+    background-position: top right;
+}
