@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* h1 인데 div의 자식인거 */
+        div > h1{
+            color: red;
+        }
+        
+        /* 문제! 클래스가 note요소의 자식인 p 요소 */
+        .note>p{
+            text-decoration:underline
+        }
+
+        .error>h1{
+            background-color: gold;
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- 감싸고 있는 것 즉 div는 h1과 p의 부모이다 
+    h1과 p는 형제이다-->
+    <div class="note">
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+
+    <div class="error">   dddddddddddd
+        <h1>Lorem, ipsum dolor.</h1>
+        <p>Lorem ipsum dolor sit.</p>
+    </div>
+
+    <!-- 얜 body를 부모로 두고있는거다 -->
+    <h1>Lorem, ipsum dolor.</h1>
+</body>
+</html>
