@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+<script>
+    var a=3;
+    // ()안에 있는게 parameter:매개변수,인자,인수다
+    function func1(params){
+        console.log("func1 function");
+        console.log(params);
+    }
+
+    // argument:매개값,인자,인수
+    func1(99);
+
+    // parameter는 0개 이상 가능
+    function func2(){
+        console.log("func2 function")
+    }
+    
+    // 매개값 넣어봤자 위에 보면 params없어서 아무 쓸모 없음
+    func2(99);
+
+    function func3(param1, param2){
+        console.log("func3 dunction");
+        console.log(param1);
+        console.log(param2);
+    }
+
+    func3(55,'donald');
+    func3(55);
+    func3();
+</script>
+</body>
+</html>
