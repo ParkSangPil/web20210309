@@ -21,10 +21,13 @@
             var b=Number(document.getElementById("input2").value);
             var c = add(a,b);
             document.getElementById("result").value=c;
+            if(a!=Number||b!=Number){
+                alert("야이 씨발년아 숫자를 넣으라고")
+            }
         }
 
         function add(x,y){
-            return Number(a+b);
+            return Number(x+y);
         }
     </script>
 </body>
