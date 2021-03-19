@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+<script>
+    // method는 object의 function 함수이다
+    function funcName(param1,param2){
+        console.log("statments,,.,,,,,.들")
+    }
+
+    var car = {
+        name:"fiat",
+        model:500,
+        
+        // 값을 함수로 가지고 있으면 이걸 메소드 라고 한다
+        start:function (param1,apram2){
+            console.log("statements......")
+        }
+    };
+
+
+    console.log(car.name);
+    funcName();
+
+    // 객체 안에 함수를 호출하는 법
+    car.start();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+        /* div {
+            display: inline;
+        } */
+
+        .result {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: greenyellow;
+            color: white;
+            font-size: 40px;
+            line-height: 200px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 50px;
+            margin: 0 auto;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+    <div class="result"></div>
+
+
+    <script>
+        lotto();
+        function lotto() {
+            var balls = [];
+
+            while (balls.length < 6) {
+                var newNumber = getNum();
+                if (!balls.includes(newNumber)) {
+                    balls.push(newNumber);
+                }
+            }
+            for (var i = 0; i < 6; i++) {
+                var elem = document.getElementsByClassName("result");
+                elem[i].innerHTML = balls[i];
+                console.log(balls[i]);
+            }
+        }
+        function getNum() {
+            return Math.floor(Math.random() * 45) + 1;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+    p{
+        display: inline;
+    }
+</style>
+</head>
+<body>
+<p>oh god can you see 에서 you는 <p id="song"></p>째에 나옵니다.</p>
+    
+    <script>
+        var str = "oh god can you see";
+        var idx = str.indexOf("you");
+
+        document.getElementById("song").innerHTML=idx;
+
+// -----------------------  
+
+        var res=str.slice(12,17);
+        console.log(res);
+        console.log(str.slice(12));
+
+
+        // ------------------------
+
+
+        var res2=str.substring(12,17);
+        console.log(res2);
+        console.log(str.substring(12));
+
+
+        // --------------------------
+
+        var res3=str.substr(12,5);
+        console.log(res3);
+        console.log(str.substr(12));
+
+    </script>
+</body>
+</html>
