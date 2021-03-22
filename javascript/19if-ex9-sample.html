@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <button onclick="add()"><i class="fas fa -plus"></i></button>
+
+    <ul id="result"></ul>
+
+    <script>
+        function add() {
+            var a = document.querySelector("input").value;
+            var ul = document.getElementById("result");
+            if (a == "") {
+
+            } else if (a.includes(" ")) {
+                
+            } else {
+                // +=가 뽀인트다
+                ul.innerHTML += "<li>" + a + "</li>";
+            }//.trim()  하는 법도 있다.
+        }
+    </script>
+</body>
+
+</html>

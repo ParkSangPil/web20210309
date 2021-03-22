@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+<!-- 증감 연산자 -->
+<script>
+    var a= 5;
+    //증가 연산자(increment) ++
+    a++;
+    console.log(a);
+
+    //감소 연산자(decrement) --
+    a--;
+    console.log(a);
+
+    //피연산자가 오른쪽에 있을 때
+    ++a;
+    console.log(a); //6
+    --a;
+    console.log(a); //5
+
+    // 서로의 차이점은 왼쪽에 있으면 사용 후에 더하고 오른쪽이면 더한 후에 사용함
+    console.log(a++); // 5 -> 6  출력 5
+    console.log(--a); // 6 -> 5  출력 5
+</script>
+</body>
+</html>

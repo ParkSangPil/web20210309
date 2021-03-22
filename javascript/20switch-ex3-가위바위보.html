@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+        body {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+
+        .container>div {
+            text-align: center;
+            width: 50%;
+        }
+
+        .user,
+        .computer {
+            font-size: 100px;
+        }
+
+        .user {
+            color: pink;
+        }
+
+        .computer {
+            color: red;
+        }
+
+        #result {
+
+            font-weight: bold;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        button {
+
+            font-size: 30px;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="game()"><i class="fas fa-hand-rock"></i></button>
+    <button onclick="game()"><i class="fas fa-hand-scissors"></i></button>
+    <button onclick="game()"><i class="fas fa-hand-paper"></i></button>
+
+    <div class="container">
+        <div class="user"></div>
+        <div>도전자&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;컴퓨터</div>
+        <div class="computer"></div>
+    </div>
+    <div id="result"></div>
+    <div id="resultother1">비긴 횟수</div>
+    <div id="resultother2">이깃 횟수</div>
+    <div id="resultother3">진 횟수</div>
+
+
+    <script>
+        var count1 = 0;
+        var count2 = 0;
+        var count3 = 0;
+        function game() {
+            //1:바위  2:가위  3:보
+
+
+            for (var i = 0; i < 1000000; i++) {
+
+                var user = Math.floor(Math.random() * 3) + 1;
+
+
+                var computer = Math.floor(Math.random() * 3) + 1;
+                // setIcon(user, document.querySelector(".user"));
+                // setIcon(computer, document.querySelector(".computer"));
+
+
+
+                var resultText = "";
+
+                if (user == computer) {
+                    resultText = "비겼습니다";
+                    count1++;
+                } else if (user == 1 && computer == 2) {
+                    resultText = "이겼습니다";
+                    count2++;
+                } else if (user == 2 && computer == 3) {
+                    resultText = "이겼습니다";
+                    count2++;
+                } else if (user == 3 && computer == 1) {
+                    resultText = "이겼습니다";
+                    count2++;
+                } else {
+                    resultText = "졌습니다";
+                    count3++;
+                }
+                // document.getElementById("result").innerHTML = resultText;
+            }
+            document.getElementById("resultother1").innerHTML = Number(count1);
+            document.getElementById("resultother2").innerHTML = Number(count2);
+            document.getElementById("resultother3").innerHTML = Number(count3);
+        }
+
+        function setIcon(hand, elem) {
+            switch (hand) {
+                case 1:
+                    elem.innerHTML = "<i class='fas fa-hand-rock'></i>";
+                    break;
+
+                case 2:
+                    elem.innerHTML = "<i class='fas fa-hand-scissors'></i>";
+                    break;
+
+                case 3:
+                    elem.innerHTML = "<i class='fas fa-hand-paper'></i>";
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
