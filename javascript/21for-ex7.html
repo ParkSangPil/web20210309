@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>별</title>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+        * {
+            font-family: monospace;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="result"></div>
+    <hr>
+    <div id="result1"></div>
+    <hr>
+    <div id="result2"></div>
+    <hr>
+    <div id="result3"></div>
+    <script>
+        var txt = "";
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j <= i; j++) {
+                txt += "*";
+            }
+            txt += "<br>";
+        }
+        document.getElementById("result").innerHTML = txt;
+        //1111111111111111111111111111111111111111111111111
+        var txt = "";
+        for (var i = 4; i >= 0; i--) {
+            for (var j = 0; j <= i; j++) {
+                txt += "*";
+            }
+            txt += "<br>";
+        }
+        document.getElementById("result1").innerHTML = txt;
+        //22222222222222222222222222222222222222222222222222
+        var txt = "";
+        for (var i = 4; i >= 0; i--) {
+            for (var e = 3; e >= i; e--) {
+                txt += "&nbsp";
+            }
+            for (var j = 0; j <= i; j++) {
+                txt += "*";
+            }
+            txt += "<br>";
+        }
+        document.getElementById("result2").innerHTML = txt;
+        //33333333333333333333333333333333333333333333333333
+        var txt = "";
+        for (var i = 0; i <= 4; i++) {
+            for (var e = 3; e >= i; e--) {
+                txt += "&nbsp";
+            }
+            for (var j = 0; j <= i; j++) {
+                txt += "*";
+            }
+            txt += "<br>";
+        }
+        document.getElementById("result3").innerHTML = txt;
+
+        txt = "";
+        for (i=0;i<5;i++){
+            
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+        button{
+            width: 40px;
+            height: 40px;
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="input1" placeholder="1부터 100까지의 수를 입력해 주세요.">
+    <br>
+    <button onclick="check()"><i class="fas fa-dice"></i></button>
+
+    <h1 id="message"></h1>
+    <script>
+
+        var computer = Math.floor(Math.random() * 100) + 1;
+        console.log(computer);
+        
+        function check() {
+            var a = document.getElementById("input1").value;
+            var userNumber = Number(a);
+            var txt = "";
+            // computerNumber와 userNumber를 비교
+            if (userNumber == computer){
+                txt = "정답입니다! 축하드려요!";
+            } else if(userNumber > computer){
+                txt = "정답보다 숫자가 높아요!";
+            } else if(userNumber < computer){
+                txt = "정답보다 숫자가 낮아요!";
+            }
+
+
+            document.getElementById("message").innerHTML = txt;
+        }
+    </script>
+</body>
+
+</html>
