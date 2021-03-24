@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <script>
+        var arr1 = [3, 4, 1, 99, 2, 11, 11, 23];
+
+        arr1.sort(function (a,b){
+            //숫자는 이렇게 해줘야 숫자 형식으로 sort가 된다!!
+            return a-b;
+        });
+
+        for (var i = 0; i < arr1.length; i++) {
+            console.log(arr1[i]);
+        }
+    </script>
+</body>
+
+</html>

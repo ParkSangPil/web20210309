@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+<script>
+    function solution(array, commands) {
+    var answer = [];
+    for(var j = 0 ; j < commands.length ; j++){
+        var mid = [];
+        mid = array.slice(commands[j][0]-1,commands[j][1]); 
+        mid.sort((a,b)=>a-b);
+        //mid.sort(function (a,b){
+        //     return a-b;
+        // });
+        answer[j] = mid[commands[j][2]-1];
+        //answer.push(mid[commands[j][2]-1]);
+    }
+    return answer;
+    console.log(answer);
+}
+</script>
+</body>
+</html>
