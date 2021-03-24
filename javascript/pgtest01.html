@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+    </style>
+</head>
+
+<body>
+
+    <script>
+        participant = ["A", "B", "C", "D", "E", "F","G","H"];
+        completion = ["A", "C", "D", "F"];
+        // participant = ["B", "C","D","A","E","F"];
+        // completion = ["D","A","C","F"];
+        
+        solution(participant, completion);
+
+        function solution(participant, completion) {
+            participant.sort();
+            completion.sort();
+            var count = 0;
+            for (var i = 0; i < participant.length; i++) {
+                var j = i - count;
+                if (participant[i] != completion[j]) {
+                    // return participant[i];
+                    console.log(participant[i])
+                    count++;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
