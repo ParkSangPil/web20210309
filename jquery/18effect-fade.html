@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                $("p").fadeIn(1000);
+            });
+            $("#btn2").click(function () {
+                $("p").fadeOut(1000);
+            });
+            $("#btn3").click(function () {
+                $("p").fadeToggle();
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <button id="btn1">fade in</button>
+    <button id="btn2">face out</button>
+    <button id="btn3">fade toggle</button>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et commodi, quas dolores incidunt rem facere accusamus quo aliquid similique, odit laborum consequuntur itaque doloremque rerum culpa exercitationem neque alias suscipit!</p>
+</body>
+
+</html>
